@@ -8,8 +8,7 @@
 </head>
 <body>
   <header>
-    <h1>Pytsada</h1>
-    <nav>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
       <ul class="nav navbar-nav">
         <li{% if this._path == '/' %} class="active"{% endif
           %}><a href="{{ '/'|url }}">Welcome</a></li>
@@ -22,12 +21,22 @@
         {% endfor %}
       </ul>
     </nav>
+    <div class="jumbotron">
+        <div class="container">
+           <h1>Pytsada</h1>
+           <p>
+               Something something Pytsada is great something something
+           </p>
+        </div>
+    </div>
   </header>
-  <main class="container">
-    {% block body %}{% endblock %}
-  </main>
-  <footer>
-    &copy; Copyright 2016 by Arthur Vincent Simon.
-  </footer>
+  <div class="container">
+      <main>
+          {% block body %}{% endblock %}
+      </main>
+      <footer>
+          &copy; Copyright 2016 by Arthur Vincent Simon.
+      </footer>
+  </div>
 </body>
 </html>
