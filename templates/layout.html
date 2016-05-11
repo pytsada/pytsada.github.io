@@ -1,7 +1,11 @@
 <!doctype html>
-<meta charset="utf-8">
-<link rel="stylesheet" href="{{ '/static/style.css'|url }}">
-<title>{% block title %}Welcome{% endblock %} — Pytsada</title>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{{ '/static/style.css'|url }}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <title>{% block title %}Welcome{% endblock %} — Pytsada</title>
+</head>
 <body>
   <header>
     <h1>Pytsada</h1>
@@ -19,10 +23,11 @@
       </ul>
     </nav>
   </header>
-  <div class="page">
+  <main class="container">
     {% block body %}{% endblock %}
-  </div>
+  </main>
   <footer>
     &copy; Copyright 2016 by Arthur Vincent Simon.
   </footer>
 </body>
+</html>
