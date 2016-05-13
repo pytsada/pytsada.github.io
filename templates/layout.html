@@ -8,34 +8,29 @@
 </head>
 <body>
   <header>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <ul class="nav navbar-nav">
-        <li{% if this._path == '/' %} class="active"{% endif %}>
-            <a href="{{ '/'|url }}">Welcome</a>
-        </li>
-        {% for href, title in [
-          ['/member', 'Members'],
-          ['/contact', 'Contact']
-        ] %}
-          <li{% if this.is_child_of(href) %} class="active"{% endif
-            %}><a href="{{ href|url }}">{{ title }}</a></li>
-        {% endfor %}
-      </ul>
-    </nav>
-    <div class="jumbotron">
-        <div class="container">
-           <h1>Pytsada</h1>
-           <p>ITG-X focus group for Python</p>
-        </div>
-    </div>
+      <div class="container">
+          <div class="row">
+              <nav class="navbar navbar-inverse">
+                  <ul class="nav navbar-nav">
+                      <li{% if this._path == '/' %} class="active"{% endif %}>
+                          <a href="{{ '/'|url }}">Welcome</a>
+                      </li>
+                      {% for href, title in [['/member', 'Members'], ['/contact', 'Contact']] %}
+                          <li{% if this.is_child_of(href) %} class="active"{% endif %}>
+                              <a href="{{ href|url }}">{{ title }}</a></li>
+                      {% endfor %}
+                  </ul>
+              </nav>
+          </div>
+      </div>
   </header>
-  <div class="container">
-      <main>
-          {% block body %}{% endblock %}
-      </main>
-      <footer>
-          &copy; Copyright 2016 by Pytsada
-      </footer>
-  </div>
+  <main>
+      {% block body %}{% endblock %}
+  </main>
+  <footer>
+      <div class="container">
+      &copy; Copyright 2016 by Pytsada
+      </div>
+  </footer>
 </body>
 </html>

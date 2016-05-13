@@ -11,10 +11,10 @@
             - Github
         #}
         <div class="row">
-            {% for x in range(3) %}
+            {% for title in ['Facebook', 'Twitter', 'Github'] %}
                 <div class="col-xs-6 col-lg-4">
                    <img src="http://placehold.it/140x100?text=Social+Media+Account" alt="Social Media Account">
-                   <h2>Social Media Account</h2>
+                   <h2>{{ title }}</h2>
                 </div>
             {% endfor %}
         </div>
