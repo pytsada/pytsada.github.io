@@ -2,17 +2,9 @@
 {% block title %}{{ this.title }}{% endblock %}
 {% block body %}
     <div class="container">
-    {# TODO
-    1. What is the mission? vision?
-    #}
         <div class="row">
             <div class="col-xs-12 col-lg-12">
-                <h2>Mission</h2>
-                <p>{{ this.mission }}</p>
-            </div>
-            <div class="col-xs-12 col-lg-12">
-                <h2>Vision</h2>
-                <p>{{ this.vision }}</p>
+                {{ this.description }}
             </div>
         </div>
     </div>
