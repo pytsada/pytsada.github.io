@@ -1,5 +1,5 @@
 [project]
 name = Pytsada
 
-[server.ghpages]
+[servers.ghpages]
 target = ghpages+https://pytsada/pytsada.github.io
